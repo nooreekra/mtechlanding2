@@ -2,8 +2,7 @@ import { useState } from "react";
 import './App.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import StarIcon from '@mui/icons-material/Star';
+import back from './assets/back.gif'
 
 
 import logo from "./assets/mtechlogo.png";
@@ -18,7 +17,7 @@ function App() {
                 <header className="bg-primary shadow-md">
                     <nav className="max-w-7xl mx-auto flex justify-between items-center p-4">
                         <div className="">
-                            <img src={logo} alt="logo" className="w-24" />
+                            <img src={logo} alt="logo" className="w-28" />
                         </div>
 
                         {/* Десктоп меню */}
@@ -55,19 +54,35 @@ function App() {
                 </header>
 
                 {/* О нас */}
-                <section id="about" className="bg-white mx-auto flex flex-col items-center py-16 px-6 text-center">
-                    <h1 className="text-4xl font-bold mb-6">IT-разработка, которая решает задачи бизнеса</h1>
-                    <div className="text-lg max-w-2xl">
-                        <p className="text-2xl font-medium text-secondary">Веб. Мобайл. Интеграции. Автоматизация. </p><br />
-                        <p>Мы создаём цифровые решения под ключ — от лендингов и телеграм-ботов до мобильных приложений и корпоративных систем.</p>
+                <section
+                    id="about"
+                    className="relative flex flex-col items-center justify-center text-center min-h-[600px] py-16 px-6 overflow-hidden"
+                >
+                    {/* Фоновая гифка */}
+                    <img
+                        src={back}
+                        alt="Background animation"
+                        className="absolute inset-0 w-full h-full object-cover opacity-20"
+                    />
+
+                    {/* Содержимое поверх */}
+                    <div className="flex flex-col items-center relative z-10 text-white">
+                        <h1 className="text-4xl font-bold mb-6">IT-разработка, которая решает задачи бизнеса</h1>
+                        <div className="text-lg max-w-2xl">
+                            <p className="text-2xl font-medium text-secondary">Веб. Мобайл. Интеграции.
+                                Автоматизация. </p><br/>
+                            <p>Мы создаём цифровые решения под ключ — от лендингов и телеграм-ботов до мобильных
+                                приложений и корпоративных систем.</p>
+                        </div>
                     </div>
                 </section>
+
 
                 {/* Что мы делаем */}
                 <section id="services" className="bg-white py-16">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-3xl font-semibold mb-8 text-center">Что мы делаем</h2>
-                        <ul className="space-y-4 text-lg list-inside">
+                        <ul className="list-disc marker:text-secondary space-y-4 text-lg list-inside">
                             <li>Веб-сайты и платформы</li>
                             <li>Мобильные приложения (iOS, Android)</li>
                             <li>Системы лояльности и CRM</li>
@@ -81,7 +96,7 @@ function App() {
                 <section className="pb-16 bg-white">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-3xl font-semibold mb-8 text-center">Почему выбирают нас</h2>
-                        <ul className="space-y-4 text-lg list-inside">
+                        <ul className="list-disc marker:text-secondary space-y-4 text-lg list-inside">
                             <li>Разработка под любые задачи — от идеи до поддержки</li>
                             <li>Глубокое погружение в бизнес-процессы</li>
                             <li>Прозрачность, сроки и контроль на всех этапах</li>
@@ -94,15 +109,15 @@ function App() {
                 <section id="experience" className="bg-white pb-16">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-3xl font-semibold mb-8 text-center">Наш опыт</h2>
-                        <ul className="space-y-4 text-lg list-inside">
-                            <li className="flex items-center">Системы лояльности для ритейла</li>
-                            <li className="flex items-center">Телеграм-боты для HR-направления</li>
-                            <li className="flex items-center">Мобильные приложения для бизнеса</li>
-                            <li className="flex items-center">Корпоративные сайты и личные кабинеты</li>
-                            <li className="flex items-center">Системы микрофинансовых организаций</li>
-                            <li className="flex items-center">Системы автоматизации контроля доступа</li>
-                            <li className="flex items-center">Приложения для автоматизации доставки товаров</li>
-                            <li className="flex items-center">Тендерные платформы</li>
+                        <ul className="list-disc marker:text-secondary space-y-4 text-lg list-inside">
+                            <li>Системы лояльности для ритейла</li>
+                            <li>Телеграм-боты для HR-направления</li>
+                            <li>Мобильные приложения для бизнеса</li>
+                            <li>Корпоративные сайты и личные кабинеты</li>
+                            <li>Системы микрофинансовых организаций</li>
+                            <li>Системы автоматизации контроля доступа</li>
+                            <li>Приложения для автоматизации доставки товаров</li>
+                            <li>Тендерные платформы</li>
                         </ul>
                     </div>
                 </section>
@@ -113,13 +128,13 @@ function App() {
                         <h2 className="text-3xl font-semibold mb-12 text-center text-dark">Проекты</h2>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                            <div className="bg-primary text-white rounded-lg p-6 flex items-center justify-center text-xl font-semibold shadow-md hover:scale-105 transition-transform">
+                            <div className="bg-secondary text-white rounded-lg p-6 flex items-center justify-center text-xl font-semibold shadow-md hover:scale-105 transition-transform">
                                 MagnumClub
                             </div>
-                            <div className="bg-primary text-white rounded-lg p-6 flex items-center justify-center text-xl font-semibold shadow-md hover:scale-105 transition-transform">
+                            <div className="bg-secondary text-white rounded-lg p-6 flex items-center justify-center text-xl font-semibold shadow-md hover:scale-105 transition-transform">
                                 MagnumLife
                             </div>
-                            <div className="bg-primary text-white rounded-lg p-6 flex items-center justify-center text-xl font-semibold shadow-md hover:scale-105 transition-transform">
+                            <div className="bg-secondary text-white rounded-lg p-6 flex items-center justify-center text-xl font-semibold shadow-md hover:scale-105 transition-transform">
                                 Mtrade
                             </div>
                         </div>
