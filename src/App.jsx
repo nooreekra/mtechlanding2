@@ -208,7 +208,7 @@ function App() {
                             {/* Стрелка влево */}
                             <button
                                 onClick={() => instanceRef.current?.prev()}
-                                className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full p-3 hover:bg-secondary transition"
+                                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full p-3 hover:bg-secondary transition"
                             >
                                 <ArrowBackIosNewIcon/>
                             </button>
@@ -230,7 +230,7 @@ function App() {
                             {/* Стрелка вправо */}
                             <button
                                 onClick={() => instanceRef.current?.next()}
-                                className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full p-3 hover:bg-secondary transition"
+                                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full p-3 hover:bg-secondary transition"
                             >
                                 <ArrowForwardIosIcon/>
                             </button>
@@ -239,7 +239,7 @@ function App() {
                 </section>
 
                 {/* Контакты */}
-                <footer id="contacts" className="bg-dark text-light py-8 text-center text-white">
+                <footer id="contacts" className="bg-dark text-light py-8 px-4 text-center text-white">
                 <h3 className="text-2xl mb-4">Контакты</h3>
                     <p>Остались вопросы? Обязательно нас спросите :)</p>
                     <a href="mailto:info@mtechs.kz"
